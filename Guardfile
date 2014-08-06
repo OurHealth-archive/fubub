@@ -15,7 +15,7 @@ end
 #                          installed the spring binstubs per the docs)
 #  * zeus: 'zeus rspec' (requires the server to be started separetly)
 #  * 'just' rspec: 'rspec'
-guard :rspec, cmd: 'bundle exec rspec' do
+guard :rspec, cmd: 'spring rspec' do
   notification :gntp, sticky: false
 
   watch(%r{^spec/.+_spec\.rb$})
@@ -39,9 +39,3 @@ guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 end
 
-
-guard :bundler do
-  watch('Gemfile')
-  # Uncomment next line if your Gemfile contains the `gemspec' command.
-  # watch(/^.+\.gemspec/)
-end
