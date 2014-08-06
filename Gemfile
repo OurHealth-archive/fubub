@@ -58,6 +58,7 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'guard-spring'
   gem 'ruby_gntp'
   gem 'better_errors'
   gem 'sprockets_better_errors'
