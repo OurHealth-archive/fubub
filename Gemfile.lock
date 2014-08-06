@@ -278,6 +278,7 @@ DEPENDENCIES
   draper
   email_spec
   factory_girl_rails
+  guard
   guard-bundler
   guard-rspec
   haml-rails

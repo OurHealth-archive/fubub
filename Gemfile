@@ -55,6 +55,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'guard'
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'ruby_gntp'
