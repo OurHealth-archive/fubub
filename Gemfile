@@ -7,7 +7,8 @@ gem 'rails', '4.1.4'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
-gem 'bootstrap-sass', '~> 3.0'
+# gem 'bootstrap-sass', '~> 3.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -61,7 +62,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'ruby_gntp'
   gem 'better_errors'
-  gem 'sprockets_better_errors'
+  # gem 'sprockets_better_errors'
   gem 'binding_of_caller'
 end
 
