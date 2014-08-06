@@ -7,6 +7,7 @@ gem 'rails', '4.1.4'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '~> 3.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -26,8 +27,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'haml-rails'
+gem 'draper'
+gem 'interactor'
+gem 'bootstrap_form'
+gem 'redcarpet'
+
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -37,3 +44,44 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'awesome_print', github: 'michaeldv/awesome_print', branch: 'v2'
+  gem 'pry'
+  gem 'pry-nav'
+end
+
+group :development do
+  gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'ruby_gntp'
+  gem 'better_errors'
+  gem 'sprockets_better_errors'
+  gem 'binding_of_caller'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'email_spec'
+  gem 'timecop'
+  gem 'selenium-webdriver'
+  gem 'capybara-firebug'
+  gem 'webmock'
+  gem 'vcr'
+end
+
+group :ci, :qa do
+  gem 'rails_12factor'
+  gem 'unicorn'
+  gem 'rails_serve_static_assets'
+  gem 'mail_safe'
+end
+
+ruby '2.1.1'
